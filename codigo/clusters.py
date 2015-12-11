@@ -6,9 +6,9 @@ import codecs
 charset = "utf-8"
 
 def readfile(filename):
+  colnames=lines[0].strip().split('\t')[1:]
   f=codecs.open(filename,encoding="utf-8", errors="ignore")
-  lines=[line for line in f]
-  
+  lines=[line for line in f]  
   # La primera linea son los títulos de columna
   colnames=lines[0].strip().split('\t')[1:]
   rownames=[]
@@ -23,9 +23,12 @@ def readfile(filename):
 
 
 from math import sqrt
-
+#ejercicio 2
 def euclidean(v1,v2):
   return sqrt(sum([(v1[i]-v2[i])**2 for i in range(len(v1))]))
+#ejercicio 3
+def manjathan(v1,v2):
+  return abs(sum([(v1[i]-v2[i]) for i in range(len(v1))]))
 
 def pearson(v1,v2):
   # Sumas simples
