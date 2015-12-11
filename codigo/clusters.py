@@ -6,7 +6,6 @@ import codecs
 charset = "utf-8"
 
 def readfile(filename):
-  colnames=lines[0].strip().split('\t')[1:]
   f=codecs.open(filename,encoding="utf-8", errors="ignore")
   lines=[line for line in f]  
   # La primera linea son los títulos de columna
